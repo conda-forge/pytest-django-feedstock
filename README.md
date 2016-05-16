@@ -5,7 +5,7 @@ Home: http://pytest-django.readthedocs.org/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A Django plugin for py.test.
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pytest-django-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pytest-django-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pytest-django-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pytest-django-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pytest-django-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pytest-django-feedstock/branch/master)
