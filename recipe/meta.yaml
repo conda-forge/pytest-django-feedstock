@@ -1,25 +1,29 @@
+{% set version = "3.0.0" %}
+
 package:
     name: pytest-django
-    version: 2.9.1
+    version: {{ version }}
 
 source:
-    fn: pytest-django-2.9.1.tar.gz
-    url: https://pypi.python.org/packages/source/p/pytest-django/pytest-django-2.9.1.tar.gz
-    md5: 3c9dde85e99ec409df209a62b4715e1a
+    fn: pytest-django-{{ version }}.tar.gz
+    url:  https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
+    sha256: 7898731205fa245926c800273dcffcd9b25e0b660a363ecb6cc2901ffe4aa1cc
 
 build:
     number: 0
     preserve_egg_dir: True
     script: python setup.py install --single-version-externally-managed --record record.txt
+    entry_points:
+        - pytest11 = django:pytest_django.plugin
 
 requirements:
     build:
         - python
         - setuptools
-        - setuptools_scm ==1.8.0
+        - setuptools_scm 1.11.1
     run:
         - python
-        - pytest >=2.5
+        - pytest >=2.9
 
 test:
     imports:
@@ -27,8 +31,8 @@ test:
 
 about:
     home: http://pytest-django.readthedocs.org/
-    license: BSD-3-Clause
-    summary: A Django plugin for py.test.
+    license: BSD 3-Clause
+    summary: 'A Django plugin for py.test.'
 
 extra:
     recipe-maintainers:
