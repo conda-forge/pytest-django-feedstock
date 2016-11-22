@@ -1,40 +1,40 @@
-{% set version = "3.0.0" %}
+{% set version = "3.1.1" %}
 
 package:
-    name: pytest-django
-    version: {{ version }}
+  name: pytest-django
+  version: {{ version }}
 
 source:
-    fn: pytest-django-{{ version }}.tar.gz
-    url:  https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
-    sha256: 7898731205fa245926c800273dcffcd9b25e0b660a363ecb6cc2901ffe4aa1cc
+  fn: pytest-django-{{ version }}.tar.gz
+  url:  https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
+  sha256: eb0d79d24ab2c0064c2d956603b77041508e25e6da50e92136ae1050d022ceaf
 
 build:
-    number: 0
-    preserve_egg_dir: True
-    script: python setup.py install --single-version-externally-managed --record record.txt
-    entry_points:
-        - pytest11 = django:pytest_django.plugin
+  number: 0
+  preserve_egg_dir: True
+  script: python setup.py install --single-version-externally-managed --record record.txt
+  entry_points:
+    - pytest11 = django:pytest_django.plugin
 
 requirements:
-    build:
-        - python
-        - setuptools
-        - setuptools_scm 1.11.1
-    run:
-        - python
-        - pytest >=2.9
+  build:
+    - python
+    - setuptools
+    - setuptools_scm 1.11.1
+  run:
+    - python
+    - pytest >=2.9
 
 test:
-    imports:
-        - pytest_django
+  imports:
+    - pytest_django
 
 about:
-    home: http://pytest-django.readthedocs.org/
-    license: BSD 3-Clause
-    summary: 'A Django plugin for py.test.'
+  home: http://pytest-django.readthedocs.org/
+  license: BSD 3-Clause
+  summary: 'A Django plugin for py.test.'
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
-        - kwilcox
+  recipe-maintainers:
+    - kwilcox
+    - ocefpaf
