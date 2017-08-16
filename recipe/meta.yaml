@@ -1,5 +1,6 @@
 {% set version = "3.1.2" %}
 
+
 package:
   name: pytest-django
   version: {{ version }}
