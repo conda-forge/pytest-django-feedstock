@@ -20,7 +20,7 @@ requirements:
   build:
     - python
     - setuptools
-    - setuptools_scm 1.11.1
+    - setuptools_scm
   run:
     - python
     - pytest >=2.9
