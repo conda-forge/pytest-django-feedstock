@@ -1,5 +1,6 @@
 {% set version = "3.1.2" %}
 
+
 package:
   name: pytest-django
   version: {{ version }}
@@ -20,7 +21,7 @@ requirements:
   build:
     - python
     - setuptools
-    - setuptools_scm 1.11.1
+    - setuptools_scm ==1.15.6
   run:
     - python
     - pytest >=2.9
