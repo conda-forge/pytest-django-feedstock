@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   preserve_egg_dir: True
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
@@ -20,7 +21,7 @@ requirements:
   build:
     - python
     - setuptools
-    - setuptools_scm 1.11.1
+    - setuptools_scm 1.15.6
   run:
     - python
     - pytest >=2.9
