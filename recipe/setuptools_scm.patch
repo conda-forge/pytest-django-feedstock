@@ -1,0 +1,33 @@
+--- setup.py.old        2018-01-23 14:13:44.825278484 -0500
++++ setup.py    2018-01-23 14:14:22.353277956 -0500
+@@ -16,9 +16,21 @@ def read(fname):
+     return codecs.open(file_path, encoding='utf-8').read()
+ 
+ 
++# This is a hack so the plugin version appears correct in the pytest plugin system
++# This will only work if the source remains the PyPI distribution and does not
++# move to a GitHub release. Without this it appears as version '0.0.0' in pytest
++# so that is the default.
++def version():
++    with open('PKG-INFO') as f:
++        for l in f.readlines():
++            if l and l.startswith('Version: '):
++                return l.split(': ')[-1].strip()
++    return '0.0.0'
++
++
+ setup(
+     name='pytest-django',
+-    use_scm_version=True,
++    version=version(),
+     description='A Django plugin for pytest.',
+     author='Andreas Pelme',
+     author_email='andreas@pelme.se',
+@@ -28,7 +40,6 @@ setup(
+     license='BSD-3-Clause',
+     packages=['pytest_django'],
+     long_description=read('README.rst'),
+-    setup_requires=['setuptools_scm==1.11.1'],
+     install_requires=['pytest>=2.9'],
+     classifiers=['Development Status :: 5 - Production/Stable',
+                  'Framework :: Django',
