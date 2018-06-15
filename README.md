@@ -14,12 +14,15 @@ Summary: A Django plugin for py.test
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pytest-django-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytest-django-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pytest-django-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pytest-django-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-django/badges/version.svg)](https://anaconda.org/conda-forge/pytest-django)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-django/badges/downloads.svg)](https://anaconda.org/conda-forge/pytest-django)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytest--django-green.svg)](https://anaconda.org/conda-forge/pytest-django) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytest-django.svg)](https://anaconda.org/conda-forge/pytest-django) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytest-django.svg)](https://anaconda.org/conda-forge/pytest-django) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytest-django.svg)](https://anaconda.org/conda-forge/pytest-django) |
 
 Installing pytest-django
 ========================
