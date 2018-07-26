@@ -18,9 +18,10 @@ requirements:
     - python
     - pip
     - setuptools_scm >=1.11.1
+    - pytest >=3.6
   run:
     - python
-    - pytest >=2.9
+    - pytest >=3.6
 
 test:
   imports:
