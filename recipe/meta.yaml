@@ -7,8 +7,6 @@ package:
 source:
   url:  https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
   sha256: 85f840e319d7b4271d6f1a3d95c0fb900c7183f7a4414e0cceed75f92bf3bc75
-  patches:
-    - setuptools_scm.patch
 
 build:
   number: 0
