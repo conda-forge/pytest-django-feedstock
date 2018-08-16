@@ -1,4 +1,4 @@
-{% set version = "3.3.3" %}
+{% set version = "3.4.1" %}
 
 package:
   name: pytest-django
@@ -6,9 +6,7 @@ package:
 
 source:
   url:  https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
-  sha256: a73e355138675db8f535777ddf34bde28580b688be17dc21d0efa65e5c16927c
-  patches:
-    - setuptools_scm.patch
+  sha256: 85f840e319d7b4271d6f1a3d95c0fb900c7183f7a4414e0cceed75f92bf3bc75
 
 build:
   number: 0
@@ -20,6 +18,7 @@ requirements:
     - python
     - pip
     - setuptools_scm >=1.11.1
+    - pathlib
     - pytest >=3.6
   run:
     - python
