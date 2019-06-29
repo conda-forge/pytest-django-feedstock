@@ -1,4 +1,4 @@
-{% set version = "3.5.0" %}
+{% set version = "3.5.1" %}
 
 package:
   name: pytest-django
@@ -6,7 +6,7 @@ package:
 
 source:
   url:  https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
-  sha256: 11a9ab9fceb2f819a0e94ba4eab791f998542f4e29eb36500cb9464dd3b4c3b6
+  sha256: 264fb4c506db5d48a6364c311a0b00b7b48a52715bad8839b2d8bee9b99ed6bb
 
 build:
   number: 0
