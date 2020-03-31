@@ -1,36 +1,39 @@
-{% set version = "3.8.0" %}
+{% set version = "3.9.0" %}
 
 package:
   name: pytest-django
   version: {{ version }}
 
 source:
-  url:  https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
-  sha256: 489b904f695f9fb880ce591cf5a4979880afb467763b1f180c07574554bdfd26
+  url: https://pypi.io/packages/source/p/pytest-django/pytest-django-{{ version }}.tar.gz
+  sha256: 664e5f42242e5e182519388f01b9f25d824a9feb7cd17d8f863c8d776f38baf9
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools_scm >=1.11.1
     - pathlib
-    - pytest >=3.6
   run:
     - python
     - pytest >=3.6
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - pytest_django
 
 about:
   home: http://pytest-django.readthedocs.org/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
   summary: A Django plugin for py.test
