@@ -5,7 +5,7 @@ Home: http://pytest-django.readthedocs.org/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Django plugin for py.test
 
