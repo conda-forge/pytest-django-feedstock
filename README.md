@@ -5,11 +5,13 @@ Home: http://pytest-django.readthedocs.org/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-django-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Django plugin for py.test
 
+Development: https://github.com/pytest-dev/pytest-django
 
+Documentation: https://pytest-django.readthedocs.io/en/latest/
 
 Current build status
 ====================
